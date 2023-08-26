@@ -1,0 +1,34 @@
+@media (min-width: 576px) {
+	.header {
+		&__list {
+			display: flex;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.main {
+		&__section {
+			&--one {
+				flex-direction: row;
+			}
+		}
+
+		&__left,
+		&__right {
+			width: 50%;
+		}
+
+		&__picture {
+			width: 100%;
+			height: auto;
+		}
+
+		&__list {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}

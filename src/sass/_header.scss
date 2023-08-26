@@ -1,0 +1,38 @@
+@use "./colors" as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+
+    // &__logo {
+    //     width: 200px;
+    //     height: auto;
+    // }
+
+    &__logo {
+        font-size: 3rem;
+        padding: 0 0.25em;
+    }
+
+    &__orange {
+        color: $orange;
+    }
+
+    &__list {
+        display: none;
+        padding: 0 0.25em;
+        font-size: 2.3rem;
+        list-style: none;
+    }
+
+    &__item {
+        padding: 0 0.3em;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $white;
+    }
+}
