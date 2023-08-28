@@ -17,7 +17,7 @@
     }
 
     &__orange {
-        color: $orange;
+        color: $second-color;
     }
 
     &__list {
@@ -34,5 +34,10 @@
     &__link {
         text-decoration: none;
         color: $white;
+        transition: color .5s;
+
+        &:hover {
+            color: $second-color-hover;
+        }
     }
 }

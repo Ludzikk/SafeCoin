@@ -13,6 +13,12 @@
 			align-items: center;
 		}
 
+		&--two {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
 		&--color-one {
 			background-color: $main-bg-color-one;
 		}
@@ -25,6 +31,69 @@
 	&__left,
 	&__right {
 		width: 100%;
+
+		&--exchange {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 500px;
+		}
+	}
+
+	&__exchange-left,
+	&__exchange-right {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 1em;
+		height: 50%;
+
+		&-value {
+			font-size: 2rem;
+		}
+	}
+
+	&__exchange-middle {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 50%;
+		i {
+			padding: 1.5em;
+			font-size: 5rem;
+		}
+	}
+
+	&__value-pic {
+		width: 40px;
+	}
+
+	&__input {
+		padding: 0.3em;
+		font-size: 2rem;
+		border: none;
+		border-radius: 15px;
+		outline: none;
+		color: $white;
+		background-color: $item-bg-two;
+	}
+
+	&__select {
+		font-size: 1.8rem;
+		text-align: center;
+		border: none;
+		border-radius: 15px;
+		outline: none;
+		color: $white;
+		background-color: $item-bg-two;
+		cursor: pointer;
+	}
+
+
+	&__select {
+		margin: 1em;
+		padding: 0.25em;
 	}
 
 	&__title {
@@ -65,12 +134,12 @@
 		padding: 1em;
 		width: 60%;
 		height: 300px;
-		border: 1px solid $orange;
+		border: 1px solid $second-color;
 		border-radius: 10px;
-		background-color: rgb(37, 23, 131);
-		
+		background-color: $item-bg-one;
+
 		&--main {
-			background-color: rgb(53, 33, 184);
+			background-color: $item-bg-two;
 		}
 	}
 

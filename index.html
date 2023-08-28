@@ -11,6 +11,7 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./dist/css/style.min.css" />
+		<script src="https://kit.fontawesome.com/bdb2f8ae99.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -66,7 +67,25 @@
 	<section class="main__section main__section--color-two">
 		<div class="wrapper">
 			<div class="main__section--two">
-				<ul class="main__coins"></ul>
+				<div class="main__left">
+					<ul class="main__coins"></ul>
+				</div>
+				<div class="main__right--exchange">
+					<div class="main__exchange-left">
+						<input class="main__input" value="0.00" type="number" min="0" max="10000"/>
+						<select class="main__select" name="" id="selectFirst">
+							<option value="EURO">$</option>
+						</select>
+					</div>
+					<div class="main__exchange-middle">
+						<i class="fa-solid fa-arrow-right-arrow-left"></i>
+					</div>
+					<div class="main__exchange-right">
+						<img class="main__value-pic" src="https://cdn.coinranking.com/bOabBYkcX/bitcoin_btc.svg" alt="Bitcoin">
+						<p class="main__exchange-right-value">0.00</p>
+						<select class="main__select" name="" id="selectSecond"></select>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>

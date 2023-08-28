@@ -17,6 +17,10 @@
 		&__left,
 		&__right {
 			width: 50%;
+
+			&--exchange {
+				width: 100%;
+			}
 		}
 
 		&__picture {
