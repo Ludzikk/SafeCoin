@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>SafeCoin - Crypto Wallet</title>
+		<title>SafeCoin - Crypto List</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -11,13 +11,20 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./dist/css/style.min.css" />
-		<script src="https://kit.fontawesome.com/bdb2f8ae99.js" crossorigin="anonymous"></script>
+		<script
+			src="https://kit.fontawesome.com/bdb2f8ae99.js"
+			crossorigin="anonymous"
+		></script>
 	</head>
 	<body>
 		<!-- @include "header.kit" -->
 		<!-- @include "sidenav.kit" -->
-        <!-- @include "main.kit" -->
+		<main class="main main--cryptolist">
+			<div class="wrapper">
+				<ul class="main__cryptolist"></ul>
+			</div>
+		</main>
 		<!-- @include "footer.kit" -->
-		<script src="./dist/js/main.min.js"></script>
+		<script src="./dist/js/cryptolist.min.js"></script>
 	</body>
 </html>

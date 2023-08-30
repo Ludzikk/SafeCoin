@@ -6,6 +6,7 @@ const selectFirst = document.querySelector("#selectFirst");
 const select = document.querySelectorAll(".main__select");
 const exchangeValue = document.querySelector(".main__exchange-right-value");
 const exchangeValueIcon = document.querySelector(".main__value-pic");
+const itemNumber = document.querySelectorAll(".main__item-number");
 const coinColorOne = "rgb(53, 33, 184)";
 const coinColorTwo = "rgb(37, 23, 131)";
 const API = {
@@ -81,8 +82,8 @@ const setEchangeOptions = () => {
 
 const setExchange = () => {
 	if (coinsExchange.value.length > 7) {
-        coinsExchange.value = coinsExchange.value.slice(0,7); 
-    }
+		coinsExchange.value = coinsExchange.value.slice(0, 7);
+	}
 
 	if (coinsExchange.value !== "") {
 		if (selectFirst.value === "EURO") {
@@ -112,6 +113,21 @@ const setFooterYear = () => {
 	footerYear.textContent = date.getFullYear();
 };
 
+const setRandomNumber = () => {
+	itemNumber.forEach((item) => {
+		const randomNum = Math.floor(Math.random() * 100000 + 50000);
+		let startNum = 30000;
+
+		setInterval(() => {
+			if(startNum < randomNum){
+				startNum += 525;
+				item.textContent = startNum;
+			}
+		}, 10);
+	});
+};
+
 setFooterYear();
+setRandomNumber();
 
 coinsExchange.addEventListener("keyup", setExchange);

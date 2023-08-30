@@ -1,0 +1,47 @@
+@use "./colors" as *;
+
+.nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -130px;
+    background-color: $item-bg-one;
+    transition: transform .5s;
+
+    &:hover {
+        transform: translateX(130px);
+    }
+
+    &__list {
+        padding: 2em 0em;
+        list-style: none;
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+
+    &__item {
+        transition: background-color .5s;
+
+        &:hover {
+            background-color: $black;
+        }
+    }
+
+    &__icon {
+        padding: 0 0.2em;
+        font-size: 2.4rem;
+
+        &--mark {
+            margin-right: 0.2em;
+            padding-left: 0.4em;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 1em 0.5em;
+        text-decoration: none;
+        color: $white;
+    }
+}

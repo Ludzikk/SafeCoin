@@ -90,7 +90,6 @@
 		cursor: pointer;
 	}
 
-
 	&__select {
 		margin: 1em;
 		padding: 0.25em;
@@ -126,44 +125,14 @@
 	}
 
 	&__item {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-		margin: 1em;
 		padding: 1em;
-		width: 60%;
-		height: 300px;
-		border: 1px solid $second-color;
-		border-radius: 10px;
-		background-color: $item-bg-one;
-
-		&--main {
-			background-color: $item-bg-two;
-		}
-	}
-
-	&__itemtitle {
-		font-size: 2.6rem;
-	}
-
-	&__option {
 		font-size: 2rem;
 	}
 
-	&__price {
-		font-size: 2.3rem;
-	}
-
-	&__btn {
-		font-size: 2rem;
-		padding: 0.25em 1em;
-		cursor: pointer;
-		transition: transform 0.5s;
-
-		&:hover {
-			transform: scale(1.1);
-		}
+	&__icon {
+		padding: 1em;
+		background-color: $item-bg-two;
+		border-radius: 50%;
 	}
 
 	&__coins {
@@ -184,6 +153,26 @@
 		&-icon {
 			width: 50px;
 			margin-right: 1em;
+		}
+	}
+
+	&__cryptolist {
+		list-style: none;
+	}
+
+	&__cryptoitem {
+		padding: 0.5em;
+		font-size: 2.4rem;
+
+		&-icon {
+			height: 35px;
+			padding: 0 0.25em;
+		}
+
+		&-link {
+			display: flex;
+			text-decoration: none;
+			color: $white;
 		}
 	}
 }
