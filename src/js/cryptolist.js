@@ -1,4 +1,5 @@
 const cryptoList = document.querySelector(".main__cryptolist");
+const footerYear = document.querySelector(".footer__year");
 const API = {
 	headers: {
 		"Content-Type": "application/json",
@@ -50,3 +51,10 @@ const setList = () => {
 		}
 	});
 };
+
+const setFooterYear = () => {
+	const date = new Date();
+	footerYear.textContent = date.getFullYear();
+};
+
+setFooterYear();
