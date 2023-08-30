@@ -8,6 +8,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -19,14 +20,4 @@ body {
 body, button, a, input, option {
     font-family: 'Inter', sans-serif;
     font-family: 'Poppins', sans-serif;
-}
-
-.wrapper {
-    margin: 0 auto;
-    max-width: 1200px;
-    width: 100%;
-}
-
-.hidden {
-    display: none;
 }

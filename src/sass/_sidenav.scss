@@ -1,6 +1,7 @@
 @use "./colors" as *;
 
 .nav {
+    display: none;
     position: fixed;
     top: 0;
     bottom: 0;

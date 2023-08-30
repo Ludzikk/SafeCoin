@@ -1,6 +1,7 @@
 @use "./colors" as *;
 
 .main {
+	padding-top: 4em;
 	background-color: $main-bg-color-one;
 
 	&__section {
@@ -15,6 +16,7 @@
 
 		&--two {
 			display: flex;
+			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 		}
@@ -157,6 +159,7 @@
 	}
 
 	&__cryptolist {
+		padding-top: 4em;
 		list-style: none;
 	}
 
