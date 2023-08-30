@@ -13,7 +13,7 @@ const addListeners = () => {
 const toggleMobileNav = () => {
 	mobileNav.classList.toggle("hidden");
 	hamburgerBtn.classList.toggle("is-active");
-	document.body.classList.toggle("hidden-body");
+	document.body.classList.toggle("body-hidden");
 };
 
 addListeners();
