@@ -16,6 +16,7 @@ const request = fetch("https://api.coinranking.com/v2/coins", API)
 	.then((response) => response.json())
 	.then((result) => {
 		coinsData.push(result.data.coins);
+		// console.log(result.data.coins[0]);
 		setList();
 	});
 

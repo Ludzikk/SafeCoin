@@ -36,8 +36,10 @@
 
 		&--exchange {
 			display: flex;
+			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			padding-top: 3em;
 			height: 500px;
 		}
 	}
@@ -46,10 +48,10 @@
 	&__exchange-right {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-end;
 		align-items: center;
+		height: 200px;
 		padding: 1em;
-		height: 50%;
 
 		&-value {
 			font-size: 2rem;
@@ -60,10 +62,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 50%;
 		i {
-			padding: 1.5em;
 			font-size: 5rem;
+			padding-right: 0.5em;
+			transform: rotate(90deg);
 		}
 	}
 
@@ -164,6 +166,9 @@
 	}
 
 	&__cryptoitem {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		padding: 0.5em;
 		font-size: 2.4rem;
 
