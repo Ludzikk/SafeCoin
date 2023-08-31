@@ -5,11 +5,23 @@
 }
 
 .hidden {
-	left: -5000px;
 	display: none;
+	left: -2000px;
 }
 
 .body-hidden {
 	overflow-y: hidden;
 	overflow-x: hidden;
+}
+
+.show-nav {
+	animation: show-nav 0.5s;
+}
+
+.hide-nav {
+	animation: hide-nav 0.5s;
+}
+
+.hide {
+	opacity: 0;
 }

@@ -22,11 +22,15 @@
 		}
 
 		&--color-one {
-			background-color: $main-bg-color-one;
+			background: $main-bg-color-one;
 		}
 
 		&--color-two {
 			background-color: $main-bg-color-two;
+		}
+
+		&--color-three {
+			background: $main-bg-color-three;
 		}
 	}
 
