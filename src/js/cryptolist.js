@@ -24,21 +24,33 @@ const setList = () => {
 	coinsData[0].forEach((item) => {
 		const number = currentItemNumber % 2;
 		const coinItem = document.createElement("li");
+		const divLeft = document.createElement("div");
+		const divRight = document.createElement("div");
 		const coinIcon = document.createElement("img");
 		const coinText = document.createElement("p");
+		const coinTextTwo = document.createElement("p");
+		const coinBtn = document.createElement("button");
 		const coinLink = document.createElement("a");
-		coinLink.setAttribute("class", "main__cryptoitem-link");
-		coinLink.setAttribute("href", "./index.html#buy");
-		coinItem.setAttribute("class", "main__cryptoitem");
-		coinIcon.setAttribute("class", "main__cryptoitem-icon");
+		divLeft.setAttribute("class", "main__coin-left");
+		divRight.setAttribute("class", "main__coin-right");
+		coinItem.setAttribute("class", "main__coin");
+		coinIcon.setAttribute("class", "main__coin-icon");
+		coinBtn.setAttribute("class", "main__coin-btn");
+		coinLink.setAttribute("class", "main__coin-link");
+		coinLink.setAttribute("href", "./buyexchange.html")
 		coinIcon.setAttribute("src", `${item.iconUrl}`);
 		coinIcon.setAttribute("alt", `${item.name} Icon`);
-		coinText.setAttribute("class", "main__cryptoitem-text");
-		coinText.textContent = `${item.symbol} $${parseFloat(item.price).toFixed(
-			2
-		)}`;
-		coinLink.append(coinIcon, coinText);
-		coinItem.append(coinLink);
+		coinText.setAttribute("class", "main__coin-text");
+		coinTextTwo.setAttribute("class", "main__coin-text");
+		coinText.textContent = `${item.symbol} $${parseFloat(
+			item.price
+		).toFixed(2)}`;
+		coinTextTwo.textContent = `${item.change}%`;
+		coinLink.textContent = "BUY";
+		coinBtn.append(coinLink)
+		divLeft.append(coinIcon, coinText);
+		divRight.append(coinTextTwo, coinBtn);
+		coinItem.append(divLeft, divRight);
 		cryptoList.append(coinItem);
 		currentItemNumber++;
 

@@ -32,20 +32,52 @@
 		&--color-three {
 			background: $main-bg-color-three;
 		}
+
+		&--buy {
+			height: calc(100vh - 172px);
+		}
+	}
+
+	&__buy {
+		width: 100%;
+	}
+
+	&__buybtn {
+		padding: 1em 2em;
+		font-size: 2rem;
+		text-transform: uppercase;
+		border: 0;
+		color: white;
+		background: $item-bg-one;
+		cursor: pointer;
+		transition: transform 0.5s;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	&__top {
+		display: flex;
+		border-bottom: 2px solid $body-bgc;
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+		background-color: $second-color;
+		overflow: hidden;
+	}
+
+	&__middle {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 1em;
+		background-color: $second-color-hover;
 	}
 
 	&__left,
 	&__right {
 		width: 100%;
-
-		&--exchange {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			padding-top: 3em;
-			height: 500px;
-		}
 	}
 
 	&__exchange-left,
@@ -62,13 +94,20 @@
 		}
 	}
 
+	&__exchange-left,
+	&__exchange-right,
+	&__exchange-middle {
+		width: 200px;
+	}
+
 	&__exchange-middle {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		i {
+
+		&-icon {
 			font-size: 5rem;
-			padding-right: 0.5em;
+			margin: 0.5em 0;
 			transform: rotate(90deg);
 		}
 	}
@@ -85,6 +124,12 @@
 		outline: none;
 		color: $white;
 		background-color: $item-bg-two;
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
 	}
 
 	&__select {
@@ -156,22 +201,24 @@
 		justify-content: space-between;
 		padding: 0.5em 2em;
 		border: 1px solid rgb(0, 0, 0);
-		font-size: 2rem;
+		font-size: 1.6rem;
 
 		&-icon {
-			width: 50px;
+			width: 35px;
+			height: 35px;
 			margin-right: 1em;
 		}
 	}
 
-	&__coin-left, &__coin-right {
+	&__coin-left,
+	&__coin-right {
 		display: flex;
 		align-items: center;
 	}
 
 	&__coin-link {
 		padding: 0 1em;
-		font-size: 2rem;
+		font-size: 1.6rem;
 		text-decoration: none;
 		color: $black;
 	}
@@ -200,7 +247,7 @@
 			text-decoration: none;
 			color: $white;
 			transition: transform 0.5s;
-			
+
 			&:hover {
 				transform: translateY(-2.5px);
 			}
@@ -208,7 +255,7 @@
 	}
 
 	&__cryptolist {
-		padding-top: 4em;
+		padding: 4em 0;
 		list-style: none;
 	}
 
