@@ -8,6 +8,7 @@
     left: -130px;
     background-color: $item-bg-one;
     transition: transform .5s;
+    z-index: 11000;
 
     &:hover {
         transform: translateX(130px);

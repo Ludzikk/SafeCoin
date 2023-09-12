@@ -1,6 +1,14 @@
+@use "./colors" as *;
+
 .wrapper {
 	margin: 0 auto;
 	max-width: 1200px;
+	width: 100%;
+}
+
+.quizwrapper {
+	margin: 0 auto;
+	max-width: 300px;
 	width: 100%;
 }
 
@@ -28,4 +36,20 @@
 
 .hidden-main {
 	display: none;
+}
+
+.opacity {
+	opacity: 0;
+}
+
+.click {
+	cursor: pointer;
+}
+
+.good-answer {
+	background-color: $good-answer;
+}
+
+.bad-answer{
+	background-color: $bad-answer;
 }

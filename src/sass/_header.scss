@@ -4,6 +4,7 @@
 	position: fixed;
 	width: 100%;
 	background-color: $body-bgc;
+	z-index: 10000;
 
 	&__container {
 		display: flex;

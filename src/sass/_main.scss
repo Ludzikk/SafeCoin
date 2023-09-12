@@ -378,3 +378,50 @@
 		}
 	}
 }
+
+.quiz {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.7);
+
+	&__bgc {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 2em;
+		width: 700px;
+		background-color: $item-bg-three;
+	}
+
+	&__title {
+		font-size: 3rem;
+		padding-bottom: 0.5em;
+	}
+
+	&__list {
+		padding-bottom: 0.5em;
+		font-size: 2.4rem;
+		list-style-type: none;
+	}
+
+	&__item:hover {
+		background-color: $item-bg-one;
+	}
+
+	&__middle {
+		width: 100%;
+	}
+
+	&__btn {
+		padding: 0.25em 0.5em;
+		font-size: 2rem;
+		cursor: pointer;
+	}
+}
