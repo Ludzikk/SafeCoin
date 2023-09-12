@@ -78,6 +78,22 @@
 	&__left,
 	&__right {
 		width: 100%;
+
+		&--quiz {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&--gif {
+			display: none;
+		}
+	}
+
+	&__gif {
+		width: 100%;
+		height: auto;
 	}
 
 	&__exchange-left,
@@ -125,12 +141,16 @@
 		justify-content: center;
 		list-style-type: none;
 		text-align: center;
+		flex-wrap: wrap;
 	}
 
 	&__infoitem {
+		display: flex;
+		align-items: center;
 		margin: 1em;
 		padding: 3em 1em;
 		width: 350px;
+		height: 200px;
 		box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
 			rgba(0, 0, 0, 0.22) 0px 10px 10px;
 		background-color: $item-bg-three;
@@ -148,8 +168,10 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		text-align: center;
 		margin: 1em;
 		padding: 1em;
+		width: 360px;
 		box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
 			rgba(0, 0, 0, 0.22) 0px 10px 10px;
 		background-color: $item-bg-three;
@@ -277,9 +299,36 @@
 		text-align: center;
 	}
 
+	&__info {
+		padding: 0.2em 0 1em 0;
+		font-size: 2rem;
+	}
+
+	&__btn {
+		padding: 0.5em 1em;
+		font-size: 2rem;
+		border: none;
+		text-transform: uppercase;
+		color: $white;
+		background-color: $item-bg-one;
+		cursor: pointer;
+		transition: background-color .5s;
+
+		&:hover {
+			background-color: $second-color-hover;
+		}
+	}
+
 	&__item {
 		padding: 1em;
-		font-size: 2rem;
+
+		&-number {
+			font-size: 4rem;
+		}
+
+		&-text {
+			font-size: 2rem;
+		}
 	}
 
 	&__icon {

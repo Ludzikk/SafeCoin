@@ -6,6 +6,7 @@ const select = document.querySelectorAll(".main__select");
 const exchangeValue = document.querySelector(".main__exchange-right-value");
 const exchangeValueIcon = document.querySelector(".main__value-pic");
 const itemNumber = document.querySelectorAll(".main__item-number");
+const quizLink = document.querySelector("#quizlink")
 const coinColorOne = "rgb(53, 33, 184)";
 const coinColorTwo = "rgb(37, 23, 131)";
 const API = {
@@ -22,7 +23,6 @@ const request = fetch("https://api.coinranking.com/v2/coins", API)
 	.then((result) => {
 		coinsData.push(result.data.coins);
 		setCoins();
-		setEchangeOptions();
 	});
 
 const setCoins = () => {
@@ -72,15 +72,12 @@ const setCoins = () => {
 const setRandomNumber = () => {
 	itemNumber.forEach((item) => {
 		const randomNum = Math.floor(Math.random() * 100000 + 50000);
-		let startNum = 30000;
-
-		setInterval(() => {
-			if (startNum < randomNum) {
-				startNum += 525;
-				item.textContent = startNum;
-			}
-		}, 10);
+		item.textContent = randomNum;
 	});
 };
+
+quizLink.addEventListener("click", () => {
+	window.open("./quiz.html", "_noopener")
+})
 
 setRandomNumber();

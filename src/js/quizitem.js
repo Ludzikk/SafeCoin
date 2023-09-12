@@ -2,6 +2,7 @@ const quizIcon = document.querySelectorAll(".main__quizicon");
 const quizCoinName = document.querySelectorAll(".main__quizcoin");
 const quizPrice = document.querySelectorAll(".main__price");
 const quizItem = document.querySelectorAll(".main__quizitem");
+const quizText = document.querySelectorAll(".main__quiztext");
 const quizItemInside = document.querySelectorAll(".quiz__item");
 const quizBtn = document.querySelectorAll(".main__quizbtn");
 const quizTitle = document.querySelector(".quiz__title");
@@ -95,6 +96,17 @@ const closeQuiz = () => {
 	quizTitle.textContent = "Click start to start quiz";
 	started = false;
 	currentQuestion = 0;
+
+	quizText.forEach((item) => {
+		const storage = sessionStorage.getItem(item.parentElement.id);
+		const parent = item.parentElement
+
+		if (parseInt(storage) === 0) {
+			item.textContent = `You already won this quiz.`
+			parent.lastElementChild.remove();
+			sessionStorage.removeItem(item.parentElement.id)
+		}
+	});
 };
 
 const nextQuestionStart = () => {
@@ -114,6 +126,7 @@ const nextQuestionStart = () => {
 		quizTitle.textContent = `You won!`;
 		quizList.classList.add("opacity");
 		startNextBtn.classList.add("hidden");
+		sessionStorage.setItem(`${quizList.id}`, "0");
 	}
 
 	// if (choosed === true && wrongAnswer !== true) {
